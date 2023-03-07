@@ -14,7 +14,7 @@ class Cucce extends Prodotti
         bool $_dispo,
         string $_img,
         string $_materiale,
-        string $_forma
+        int $_forma
     ) {
         parent::__construct(
             $_categoria,
