@@ -1,16 +1,19 @@
 <?php
 require_once __DIR__.'./categoria.php';
 class Prodotti{
-    protected $macrogruppo;
     protected $categoria;
     protected $nome_prodotto;
     protected $prezzo;
     protected $disponibilita;
     protected $img_path;
 
-    function __construct(string $_macrogruppo, Categoria $_categoria, string $_nome_prod, float $_prezzo, bool $_dispo, string $_img)
+    function __construct(
+        Categoria $_categoria,
+        string $_nome_prod,
+        float $_prezzo,
+        bool $_dispo,
+        string $_img)
     {
-        $this->macrogruppo = $_macrogruppo;
         $this->categoria = $_categoria;
         $this->nome_prodotto = $_nome_prod;
         $this->prezzo = $_prezzo;
@@ -18,10 +21,6 @@ class Prodotti{
         $this->img_path = $_img;
     }
 
-    public function getMacrogrupppo()
-    {
-        return $this->macrogruppo;
-    }
     public function getCategoria()
     {
         return $this->categoria;
