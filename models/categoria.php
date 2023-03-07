@@ -1,8 +1,8 @@
 <?php
 
 class Categoria{
-    protected $nome;
-    protected $icona;
+    public $nome;
+    public $icona;
 
     function __construct(string $_nome, string $_icona)
     {
@@ -10,11 +10,11 @@ class Categoria{
         $this->icona = $_icona;
     }
 
-    public function getNome(){
-        return $this->nome;
-    }
-    public function getIcona()
-    {
-        return $this->icona;
-    }
+    // public function getNome(){
+    //     return $this->nome;
+    // }
+    // public function getIcona()
+    // {
+    //     return $this->icona;
+    // }
 }
