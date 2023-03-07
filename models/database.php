@@ -36,7 +36,7 @@ $ProdottiCibo[] = new Cibo(
     $categoriaCani,
     'Monge SOLO Lattina',
     2.99,
-    true,
+    false,
     'https://arcaplanet.vtexassets.com/arquivos/ids/243843/monge-monoproteico-cane-pate-solo-agnello.jpg?v=1764598516',
     'Umido',
     'Tutte le età',

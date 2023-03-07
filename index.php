@@ -44,9 +44,11 @@ require_once __DIR__ . '/models/database.php';
                         <p class="mb-0">Gusto <?php echo $element->gusto ?></p>
                         <p class="mb-1">Adatto per età: <?php echo $element->eta ?></p>
                         <p class="mb-0">Quantità: <?php echo $element->peso_prodotto ?> grammi</p>
-                        <p class="mb-1"> Prezzo: € <?php echo $element->prezzo ?></p>
-                        <p class="card-text"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto non disponibile' ?></p>
-                        <a href="#" class="btn btn-success">Acquista</a>
+                        <p class="mb-1"> Prezzo:
+                            <span class="text-warning fw-semibold">€ <?php echo number_format($element->prezzo, 2, ',', '.')?></span>
+                        </p>
+                        <p class="card-text fw-semibold <?php echo ($element->disponibilita) ? 'text-success' : 'text-danger' ?>"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto al momento non disponibile' ?></p>
+                        <a href="#" class="<?php echo ($element->disponibilita) ? 'btn-success' : 'btn-secondary' ?> btn <?php echo ($element->disponibilita) ? '' : 'disabled' ?>">Acquista</a>
                     </div>
                 </div>
             <?php
@@ -69,9 +71,11 @@ require_once __DIR__ . '/models/database.php';
                         <h5 class="card-title"><?php echo $element->nome_prodotto ?></h5>
                         <img class="img-fluid" src="<?php echo $element->img_path ?>" class="card-img-top" alt="...">
                         <p class="mb-0">Materiale prodotto: <?php echo $element->materiale ?></p>
-                        <p class="mb-1"> Prezzo: € <?php echo $element->prezzo ?></p>
-                        <p class="card-text"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto non disponibile' ?></p>
-                        <a href="#" class="btn btn-success">Acquista</a>
+                        <p class="mb-1"> Prezzo:
+                            <span class="text-warning fw-semibold">€ <?php echo number_format($element->prezzo, 2, ',', '.')?></span>
+                        </p>
+                        <p class="card-text fw-semibold <?php echo ($element->disponibilita) ? 'text-success' : 'text-danger' ?>"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto al momento non disponibile' ?></p>
+                        <a href="#" class="<?php echo ($element->disponibilita) ? 'btn-success' : 'btn-secondary' ?> btn <?php echo ($element->disponibilita) ? '' : 'disabled' ?>">Acquista</a>
                     </div>
                 </div>
             <?php
@@ -95,9 +99,11 @@ require_once __DIR__ . '/models/database.php';
                         <img class="img-fluid" src="<?php echo $element->img_path ?>" class="card-img-top" alt="...">
                         <p class="mb-0">Materiale prodotto: <?php echo $element->materiale ?></p>
                         <p class="mb-0">Diametro: <?php echo $element->forma ?> cm</p>
-                        <p class="mb-1"> Prezzo: € <?php echo $element->prezzo ?></p>
-                        <p class="card-text"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto non disponibile' ?></p>
-                        <a href="#" class="btn btn-success">Acquista</a>
+                        <p class="mb-1"> Prezzo:
+                            <span class="text-warning fw-semibold">€ <?php echo number_format($element->prezzo, 2, ',', '.')?></span>
+                        </p>
+                        <p class="card-text fw-semibold <?php echo ($element->disponibilita) ? 'text-success' : 'text-danger' ?>"><?php echo ($element->disponibilita) ? 'Prodotto disponibile' : 'Prodotto al momento non disponibile' ?></p>
+                        <a href="#" class="<?php echo ($element->disponibilita) ? 'btn-success' : 'btn-secondary' ?> btn <?php echo ($element->disponibilita) ? '' : 'disabled' ?>">Acquista</a>
                     </div>
                 </div>
             <?php
